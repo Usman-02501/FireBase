@@ -1,6 +1,8 @@
 import React from 'react';
-import LoginPage from '../Screens/LoginPage';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from '../Screens/LoginScreen';
+import SignUpScreen from '../Screens/SignUpScreen';
+import HomeScreen from '../Screens/HomeScreen';
 
 export const MainStack = () => {
   const Stack = createNativeStackNavigator();
@@ -13,7 +15,9 @@ export const MainStack = () => {
         animation: 'none',
       }}
     >
-      <Stack.Screen name="Login" component={LoginPage} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name='SignUp'component={SignUpScreen}/>
+      <Stack.Screen name='Home'component={HomeScreen}/>
     </Stack.Navigator>
   );
 };
